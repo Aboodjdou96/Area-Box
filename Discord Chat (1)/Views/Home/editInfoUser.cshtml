@@ -1,0 +1,45 @@
+﻿@model Discord_Chat__1_.Models.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>editInofUser</title>
+</head>
+<body>
+    <div>
+        <h2>Edit Inforamtion</h2>
+        @using (Html.BeginForm("editInfoUser", "Home", FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td>User Name:</td>
+                    <td>@Html.TextBoxFor(m => m.userName)</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>@Html.TextBoxFor(m => m.userEmail)</td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td>@Html.TextBoxFor(m => m.userPassword)</td>
+                </tr>                
+                <tr>
+                    <td>Date OF Bitrh:</td>
+                    <td>@Html.TextBoxFor(m => m.dateOFBitrh)</td>
+                </tr>
+            </table>
+            <input type="submit" value="Edit" />
+
+
+
+        }
+
+    </div>
+</body>
+</html>
